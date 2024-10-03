@@ -14,14 +14,14 @@ export default async function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" className="h-full">
 			{/* <GoogleTagManager gtmId='' /> */}
 
-			<body className="bg-canvas text-ink">
+			<body className="flex h-full min-h-screen flex-col bg-canvas text-ink">
 				<SkipToContent />
 				<Announcement />
 				<Header />
-				<main id="main-content" tabIndex={-1}>
+				<main id="main-content" tabIndex={-1} className="flex-grow">
 					{children}
 				</main>
 				<Footer />
